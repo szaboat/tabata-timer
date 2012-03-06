@@ -23,11 +23,11 @@ class CountdownTimer
         else
             if rounds > 0
                 if round_finished
+                    document.getElementsByName('rounds')[0].value = rounds
                     timer.restart()
                 else
                     timer.break()
                     rounds--
-                    document.getElementsByName('rounds')[0].value = rounds
             else
                 timer.playSound()
                 @.clearTimeout(interval)
