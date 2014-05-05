@@ -50,14 +50,22 @@ class CountdownTimer
         endDate = Date.now() + @off_sec.value * 1000
         round_finished = true
         element.style.color = "red"
+        timer.playBreak();
 
     restart: ->
         endDate = Date.now() + @on_sec.value * 1000
         round_finished = false
         element.style.color = "green"
+        timer.playStart();
 
     playSound: ->
         alert "Fin!" # TODO find mp3, create audio tag, play mp3
+
+    playBreak: ->
+        document.getElementById('end').play()
+
+    playStart: ->
+        document.getElementById('start').play()
 
 timer = new CountdownTimer
 document.getElementsByTagName('button')[0].addEventListener "click", (e) =>
