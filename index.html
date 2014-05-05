@@ -21,7 +21,7 @@
             .on { color: green; }
             .off { color: red; }
 	    div { margin: 0.3em 0; }
-	    input { font-size: .8em; }  
+	    input { font-size: .8em; }
             </style>
     </head>
     <body>
@@ -41,6 +41,18 @@
             </div>
             <button>Go</button>
         <form>
+
+        <audio id="start">
+          <source src="sounds/beep.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="end">
+          <source src="sounds/end.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+
         <script src="lib/app.js"></script>
     </body>
 </html>
